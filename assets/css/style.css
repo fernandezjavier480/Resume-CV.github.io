@@ -1481,3 +1481,113 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid rgba(184, 182, 182, 0.7); /* borde negro elegante */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* sombra ligera */
+}
+
+.icon-circle i {
+  font-size: 28px;
+  color: #000; /* íconos en negro por defecto */
+  transition: color 0.3s ease;
+}
+
+.icon-circle i.colored {
+  color: #0d1b2a !important; /* azul oscuro */
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.icon-circle:hover {
+  transform: translateY(-5px) scale(1.08);
+  border-color: #b9b3b3; /* resalta el borde */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.icon-circle:hover i.colored {
+  color: #0078ff !important; /* azul más claro al hacer hover */
+}
+
+.skill-mf {
+  margin-top: 20px;
+}
+
+.skill-item {
+  margin-bottom: 18px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 50px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #daf3f0, #34c0f4);
+  transition: width 1s ease-in-out;
+}
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 50px;  /* más espacio entre línea y texto */
+  border-left: 2px solid #ddd;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;   /* mueve el punto a la izquierda */
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00b09b;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #00b09b33;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.timeline-content h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.timeline-content p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
