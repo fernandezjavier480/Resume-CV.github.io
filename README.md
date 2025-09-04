@@ -53,4 +53,4 @@ Los íconos de las habilidades están destacados con un estilo de círculo y col
 ## Cómo Ejecutar
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
+   git clone https://github.com/fernandezjavier480/Resume-CV.github.io.git
