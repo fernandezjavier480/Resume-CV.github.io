@@ -888,7 +888,10 @@
                   <!-- Formspree -->
                    <!-- Formulario con Formspree -->
                    <!-- Formulario de contacto con Formspree -->
-                  <form id="contact-form" action="https://formspree.io/f/mvgbvyql" method="POST" class="php-email-form">
+                   <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" class="php-email-form">
+                    <!-- StaticForms API key -->
+                    <input type="hidden" name="accessKey" value="sf_g9dbl9gn0h0204kbcijne3jn">
+                  
                     <div class="row">
                       <div class="col-md-12 mb-3">
                         <div class="form-group">
@@ -907,16 +910,22 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea name="message" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                          <textarea name="message" class="form-control shadow-sm rounded-3" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                         </div>
                       </div>
-                      <div class="col-md-12 text-center">
-                        <button type="submit" class="button button-a button-big button-rouded">Enviar</button>
+                  
+                      <!-- Anti-spam (honeypot) -->
+                      <input type="text" name="honeypot" style="display:none">
+                  
+                      <div class="col-md-12 text-center mt-4">
+                        <button type="submit" class="btn btn-lg btn-primary px-4 shadow rounded-pill">
+                          <i class="bi bi-send-fill me-2"></i> Enviar
+                        </button>
                       </div>
                     </div>
                   </form>
-
-                  <!-- Mensaje de confirmación oculto -->
+                  
+                  <!-- Mensajes de confirmación -->
                   <div id="form-success" class="alert alert-success alert-dismissible fade show text-center mt-3" style="display: none;">
                     ✅ ¡Gracias! Tu mensaje ha sido enviado correctamente.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -927,24 +936,23 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                   
-
-                  <!-- Script para manejar la confirmación -->
+                  <!-- Script de confirmación -->
                   <script>
                     const form = document.getElementById("contact-form");
                     const successMsg = document.getElementById("form-success");
                     const errorMsg = document.getElementById("form-error");
-
+                  
                     form.addEventListener("submit", async (e) => {
                       e.preventDefault();
                       const formData = new FormData(form);
-
+                  
                       try {
                         const response = await fetch(form.action, {
                           method: form.method,
                           body: formData,
-                          headers: { 'Accept': 'application/json' }
+                          headers: { "Accept": "application/json" }
                         });
-
+                  
                         if (response.ok) {
                           successMsg.style.display = "block";
                           errorMsg.style.display = "none";
@@ -959,6 +967,7 @@
                       }
                     });
                   </script>
+                  
                 </div>
               </div>
 
@@ -979,32 +988,33 @@
                 </div>
                 
                 <!-- Botones con íconos -->
-                <div class="text-center mt-3 d-flex flex-wrap justify-content-center gap-2">
+                <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-3">
                   <!-- WhatsApp -->
                   <a href="https://wa.me/573503380110?text=Hola%20Javier,%20quiero%20contactarte" 
                      target="_blank" 
-                     class="btn btn-sm btn-outline-success d-flex align-items-center">
-                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                     class="btn btn-lg btn-success d-flex align-items-center px-3 shadow-sm rounded-pill">
+                    <i class="bi bi-whatsapp me-2 fs-5"></i> WhatsApp
                   </a>
                 
                   <!-- Gmail -->
                   <a href="mailto:fernandezjavier480@gmail.com?subject=Contacto%20desde%20tu%20portafolio" 
-                     class="btn btn-sm btn-outline-danger d-flex align-items-center">
-                    <i class="bi bi-envelope-fill me-1"></i> Gmail
+                     class="btn btn-lg btn-danger d-flex align-items-center px-3 shadow-sm rounded-pill">
+                    <i class="bi bi-envelope-fill me-2 fs-5"></i> Gmail
                   </a>
                 
                   <!-- LinkedIn -->
                   <a href="https://www.linkedin.com/in/javier-fernandezds" target="_blank" 
-                     class="btn btn-sm btn-outline-primary d-flex align-items-center">
-                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                     class="btn btn-lg btn-primary d-flex align-items-center px-3 shadow-sm rounded-pill">
+                    <i class="bi bi-linkedin me-2 fs-5"></i> LinkedIn
                   </a>
                 
                   <!-- GitHub -->
                   <a href="https://github.com/fernandezjavier480" target="_blank" 
-                     class="btn btn-sm btn-outline-dark d-flex align-items-center">
-                    <i class="bi bi-github me-1"></i> GitHub
+                     class="btn btn-lg btn-dark d-flex align-items-center px-3 shadow-sm rounded-pill">
+                    <i class="bi bi-github me-2 fs-5"></i> GitHub
                   </a>
                 </div>
+                
                 
 
             </div>
