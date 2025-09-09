@@ -1685,9 +1685,10 @@ footer .credits a {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
+
 .testimonials .icon-circle i {
-  font-size: 2rem;
-  color: #f8f9fa;
+  font-size: 3rem; /* los íconos también un poco más grandes */
+  color: #f3f3ea; /* dorado para destacar reconocimientos */
 }
 
 .testimonials .icon-circle:hover {
@@ -1695,18 +1696,23 @@ footer .credits a {
   transform: scale(1.1);
 }
 
+/* ==== Recognitions Section ==== */
 .testimonials .author {
-  display: block;
-  font-size: 16px;
+  font-size: 1.7rem; /* un poco más grande para títulos */
   font-weight: 600;
-  color: #ffffff;
-  margin-top: 8px;
+  color: #fff;
 }
 
-.testimonials .content-test .description {
+.testimonials .content-test {
   font-size: 14px;
   line-height: 1.6;
   color: #e0e0e0;
+}
+
+.testimonials .description {
+  font-size: 1.4rem; /* agranda el texto del reconocimiento */
+  line-height: 1.7;
+  color: #f1f5f9; /* gris muy claro para contraste */
 }
 
 
