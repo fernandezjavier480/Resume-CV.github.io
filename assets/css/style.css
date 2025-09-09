@@ -1708,3 +1708,162 @@ footer .credits a {
   line-height: 1.6;
   color: #e0e0e0;
 }
+
+
+/* Controlar tamaño de imágenes en el portafolio */
+.work-img img {
+  max-width: 220px; /* ancho máximo de la imagen */
+  height: auto;     /* mantiene la proporción */
+  margin: 0 auto;   /* centra la imagen en su contenedor */
+  display: block;
+  border-radius: 12px; /* opcional, esquinas redondeadas */
+}
+
+
+/* Imágenes de las tarjetas del Blog */
+.card-img img {
+  max-width: 220px;   /* ancho máximo */
+  height: auto;       /* mantiene proporción */
+  margin: 0 auto;     /* centra la imagen */
+  display: block;
+  border-radius: 12px; /* opcional, esquinas redondeadas */
+}
+
+
+/* ===== Contact Section Modern Style ===== */
+
+/* Fondo con overlay más elegante */
+#contact {
+  position: relative;
+  z-index: 1;
+}
+
+#contact .overlay-mf {
+  background: rgba(30, 58, 138, 0.8); /* azul oscuro semi-transparente */
+  backdrop-filter: blur(6px);          /* efecto vidrio */
+}
+
+/* Caja principal */
+.contact-mf .box-shadow-full {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.contact-mf .box-shadow-full:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Quitar cualquier borde previo */
+.title-box-2 h5 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #111;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: none !important; /* elimina el subrayado duplicado */
+  padding-bottom: 8px;
+}
+
+
+
+/* Inputs modernos */
+.php-email-form .form-control {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+}
+.php-email-form .form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+/* Botón principal */
+.php-email-form button[type="submit"] {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg, #2563eb, #1e3a8a);
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.php-email-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #1e3a8a, #2563eb);
+}
+
+/* Listado de contacto */
+.more-info .list-ico li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #444;
+}
+.more-info .list-ico li span {
+  color: #2563eb;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Botones sociales */
+#contact .btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#contact .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensajes de alerta */
+#form-success,
+#form-error {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ==== Footer Moderno ==== */
+footer {
+  background: #0f172a; /* azul oscuro elegante (tailwind slate-900) */
+  color: #f8fafc;      /* gris muy claro */
+  padding: 40px 0 20px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+}
+
+/* Líneas finas arriba para separar */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Textos */
+footer .copyright {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #cbd5e1; /* gris claro */
+}
+
+/* Hover sutil para textos (si algún día son enlaces) */
+footer .copyright:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Créditos ocultos o discretos */
+footer .credits {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
